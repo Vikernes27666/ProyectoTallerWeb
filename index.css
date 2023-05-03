@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    font-size: 25px;
+    margin: 0;
+    background-image: url("imagenes/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: black;
+  }
+  
+  .links {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .nav-item {
+    margin-left: 1rem;
+    display: inline-block;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: yellow;
+  }
