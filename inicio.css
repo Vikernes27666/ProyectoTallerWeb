@@ -101,3 +101,18 @@ body {
   text-decoration: none;
   color: yellow;
 }
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+
+.redes-sociales a {
+  color: black; /* Color del icono */
+  font-size: 24px; /* Tamaño del icono */
+  margin-right: 10px; /* Espacio entre iconos */
+}
+
+.redes-sociales a:last-child {
+   margin-right :0 ;
+}
+
