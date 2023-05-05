@@ -73,7 +73,7 @@ button {
 .inner-container {
   border-radius: 20px;
   width: 400px;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
 }
 
@@ -127,6 +127,16 @@ button {
 .box p span {
   cursor: pointer;
   color: #666;
+}
+.login-icon {
+  font-size: 70px; 
+  text-align: center;
+  display: block;
+  margin-bottom: 5px;   
+}
+.login-container{
+  text-align: center;
+
 }
 
 .piedepagina {
