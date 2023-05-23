@@ -1,14 +1,14 @@
 @font-face {
-  font-family:slackey;
-  src: url(font/Slackey/Slackey-Regular.ttf); 
+  font-family:"slackey";
+  src: url(Estilos/Font/Slackey-Regular.ttf); 
 }
 @font-face {
-  font-family:SofadiOne;
-  src: url(font/SofadiOne/SofadiOne-Regular.ttf); 
+  font-family:"SofadiOne";
+  src: url(Estilos/Font/SofadiOne-Regular.ttf); 
 }
 @font-face {
-  font-family:Poppins;
-  src: url(font/Poppins/Poppins-Bold.ttf); 
+  font-family:"Poppins";
+  src: url(Estilos/Font/Poppins-Bold.ttf); 
 }
 
 body {
@@ -16,9 +16,9 @@ body {
   font-family: sans-serif;
   font-size: 16px; /* El tamaño base por defecto de la fuentes en web es 16px*/
   margin: 0;
-  background-image: url("imagenes/fondo.jpg");
+  background-image: url(img/Fondo1.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% ;
   position: relative;
   height: 2532px;
 }

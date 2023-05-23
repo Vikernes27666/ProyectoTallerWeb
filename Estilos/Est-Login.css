@@ -2,10 +2,12 @@
   font-family: slackey;
   src: url(font/Slackey/Slackey-Regular.ttf);
 }
+
 @font-face {
   font-family: SofadiOne;
   src: url(font/SofadiOne/SofadiOne-Regular.ttf);
 }
+
 @font-face {
   font-family: Poppins;
   src: url(font/Poppins/Poppins-Bold.ttf);
@@ -14,7 +16,8 @@
 body {
   position: relative;
   font-family: sans-serif;
-  font-size: 16px; /* El tamaño base por defecto de la fuentes en web es 16px*/
+  font-size: 16px;
+  /* El tamaño base por defecto de la fuentes en web es 16px*/
   margin: 0;
   background-image: url("imagenes/fondo.jpg");
   background-repeat: no-repeat;
@@ -26,8 +29,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 1550px;
-  
+  height: 800px;
+
 }
 
 .header {
@@ -45,6 +48,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .vid-container {
   position: relative;
   height: 100vh;
@@ -66,6 +70,7 @@ button {
   height: auto;
   z-index: -100;
 }
+
 .inner {
   position: absolute;
 }
@@ -91,6 +96,7 @@ button {
   margin: 30px 0;
   font-size: 30px;
 }
+
 .box input {
   display: block;
   width: 300px;
@@ -100,12 +106,14 @@ button {
   color: #fff;
   border: 0;
 }
+
 .box input:focus,
 .box input:active,
 .box button:focus,
 .box button:active {
   outline: none;
 }
+
 .box button {
   background: #acbb02;
   border: 0;
@@ -117,24 +125,29 @@ button {
   display: block;
   cursor: pointer;
 }
+
 .box button:active {
   background: #27ae60;
 }
+
 .box p {
   font-size: 14px;
   text-align: center;
 }
+
 .box p span {
   cursor: pointer;
   color: #666;
 }
+
 .login-icon {
-  font-size: 70px; 
+  font-size: 70px;
   text-align: center;
   display: block;
-  margin-bottom: 5px;   
+  margin-bottom: 5px;
 }
-.login-container{
+
+.login-container {
   text-align: center;
 
 }
@@ -181,11 +194,14 @@ button {
 }
 
 .redes-sociales a {
-  color: black; /* Color del icono */
-  font-size: 24px; /* Tamaño del icono */
-  margin-right: 10px; /* Espacio entre iconos */
+  color: black;
+  /* Color del icono */
+  font-size: 24px;
+  /* Tamaño del icono */
+  margin-right: 10px;
+  /* Espacio entre iconos */
 }
 
 .redes-sociales a:last-child {
-   margin-right :0 ;
+  margin-right: 0;
 }
