@@ -170,26 +170,6 @@ main > * + * {
   margin-right: auto;
 }
 
-/* div {
-    display: flex;
-    text-align: center;
-} */
-
-/* .PatiosdeComida {
-  background-repeat: no-repeat;
-  background-position: 0cqmin;
-  background-size: contain;
-  position: relative;
-  background-image: url("Imagenes/Patios_de_comida.png");
-  width: 280px;
-  height: 120px;
-  text-align: center;
-  padding: 0 10px;
-  font-size: 20px;
-  color: black;
-  border-radius: 30px;
-} */
-
 .container {
   display: flex;
   justify-content: center;
@@ -201,29 +181,6 @@ main > * + * {
   gap: 200px;
 }
 
-/* .scroll-container {
-  width: 330px;
-  height: 500px;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  border-radius: 30px;
-}
-
-.scroll-container::-webkit-scrollbar {
-  display: none;
-}
-
-.scroll-container1 {
-  width: 440px;
-  height: 500px;
-  overflow: scroll;
-  scroll-behavior: smooth;
-  border-radius: 30px;
-}
-
-.scroll-container1::-webkit-scrollbar {
-  display: none;
-} */
 
 /*PIE DE PAGINA */
 .piedepagina {
