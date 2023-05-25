@@ -27,7 +27,7 @@ body {
     margin-left: -8px;
 }
 
-p {
+p.nlocal {
     color: white;
     text-align: center;
     font-size: 21px;
@@ -38,10 +38,10 @@ p {
 
 
 
-div {
+/* div {
     display: flex;
     text-align: center;
-}
+} */
 
 .contenedor0{
     display: flex;
