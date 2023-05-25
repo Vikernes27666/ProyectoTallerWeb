@@ -79,6 +79,18 @@ main > * + * {
   background-color: #dfdcdc;
   border-radius: 20px;
   cursor: pointer;
+  
+}
+.btn-restaurantes img {
+  margin-bottom: 10px;
+  margin-left: 45px;
+}
+.btn-patios img {
+  margin-bottom: 10px;
+  margin-left: 46px;
+}
+button img, button span {
+  display: block;
 }
 
 .btn-mapas,
@@ -180,6 +192,7 @@ main > * + * {
   justify-content: center;
   gap: 200px;
 }
+
 
 
 /*PIE DE PAGINA */
