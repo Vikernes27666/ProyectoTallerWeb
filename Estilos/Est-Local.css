@@ -1,854 +1,284 @@
 body {
-    position: relative;
-    font-family: sans-serif;
-    font-size: 16px;
-    /* El tamaño base por defecto de la fuentes en web es 16px*/
-    margin: 0;
-    background-image: url(img/Fondo2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 2532px;
+  position: relative;
+  font-family: sans-serif;
+  font-size: 16px;
+  /* El tamaño base por defecto de la fuentes en web es 16px*/
+  margin: 0;
+  background-image: url(img/Fondo2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+button {
+  font: inherit;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    background-color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
 }
 
-.nlocal{
-    align-content: center;
-    justify-content: center;
-    margin-left: -8px;
+main {
+  padding-top: 12rem; /* 12 * 16px */
+  padding-bottom: 12rem; /* 12 * 16px */
+  font-size: 21px;
 }
 
-p.nlocal {
-    color: white;
-    text-align: center;
-    font-size: 21px;
-    font-family: verdana;
-    background-color: unset;
-    margin-left: 5%;
+main > * + * {
+  margin-top: 2rem;
 }
 
+.titulo-principal {
+  text-transform: uppercase;
+}
 
+.titulo-principal,
+.titulo-descripcion {
+  color: white;
+  text-align: center;
+}
+
+.buscador-fecha {
+  display: flex;
+  justify-content: space-between;
+  width: 60rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buscador-fecha > * {
+  display: block;
+  background-color: #dfdcdc;
+}
+
+.buscador-fecha input {
+  padding: 0.5rem;
+  font: inherit;
+}
+
+.botones {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 15rem;
+}
+
+.btn-restaurantes,
+.btn-patios {
+  padding: 1rem 2rem;
+  border: none;
+  text-transform: uppercase;
+  background-color: #dfdcdc;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-mapas,
+.buscador {
+  border-radius: 999px;
+}
+
+.btn-mapas {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.distritos-ubicaciones {
+  display: flex;
+  gap: 3.75rem;
+  max-height: 50rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 1220px;
+  max-width: 90%;
+}
+
+.distritos,
+.ubicaciones {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: hsl(0, 4%, 87%, 0.75);
+}
+
+.distritos {
+  display: grid;
+  gap: 1rem;
+  flex-basis: 30%;
+  overflow-y: scroll;
+}
+
+.distritos::-webkit-scrollbar {
+  display: none;
+}
+
+.distrito {
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 21px;
+}
+
+.ubicaciones {
+  flex-basis: 70%;
+  overflow-y: scroll;
+}
+
+.ubicaciones::-webkit-scrollbar {
+  display: none;
+}
+
+.ubicaciones > * + * {
+  margin-top: 1rem;
+}
+
+.ubicacion {
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  font-size: 21px;
+  padding: 1rem;
+}
+
+.ubicacion a {
+  display: block;
+  margin-left: auto;
+  width: max-content;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  background-color: #018e50;
+}
+
+.delivery-img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* div {
     display: flex;
     text-align: center;
 } */
 
-.contenedor0{
-    display: flex;
-    justify-content: center;
-    gap: 150px;
-
-}
-
-.PatiosdeComida {
-
-    background-repeat: no-repeat;
-    /* Evitar que se repita la imagen */
-    background-position: 0cqmin;
-    background-size: contain;
-    /* Ajustar la imagen al tamaño del botón */
-    position: relative;
-    background-image: url('Imagenes/Patios_de_comida.png');
-
-    width: 280px;
-    height: 120px;
-    text-align: center;
-    padding: 0 10px;
-    font-size: 20px;
-    color: black;
-    border-width: initial;
-    border-color: initial;
-    border-image: initial;
-    border-radius: 30px;
-}
-
-.Restaurantes {
-
-    background-image: url('Imagenes/Restaurantes.png');
-    background-repeat: no-repeat;
-    /* Evitar que se repita la imagen */
-    background-position: 0cqmin;
-    background-size: contain;
-    /* Ajustar la imagen al tamaño del botón */
-    position: relative;
-    align-items: center;
-
-    width: 280px;
-    height: 120px;
-    text-align: center;
-    padding: 0 10px;
-    font-size: 20px;
-    border-radius: 30px;
-    border-width: initial;
-    border-color: initial;
-    border-image: initial;
-
-
-}
-
-.Rectangulo {
-    width: 330px;
-    height: 1586px;
-    text-align: center;
-    background: #999999;
-    position: relative;
-    border-radius: 30px;
-}
-
-.Rectangulo1 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 20px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 200%;
-    border-color: #cccccc;
-}
-
-.Rectangulo2 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 70px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo3 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 120px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo4 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 170px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo5 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 220px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo6 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 270px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo7 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 320px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo8 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 370px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo9 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 420px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo10 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    background: #cccccc;
-    position: absolute;
-    left: 0px;
-    top: 470px;
-    border-radius: 15px;
-    text-align: center;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo11 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 520px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo12 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 570px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo13 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 620px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo14 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 670px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo15 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 720px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo16 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 770px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo17 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 820px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo18 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 870px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo19 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 920px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo20 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 970px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo21 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1020px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo22 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1070px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo23 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1120px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo24 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1170px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo25 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1220px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo26 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1270px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo27 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1320px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo28 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1370px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo29 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1420px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo30 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1470px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
-
-.Rectangulo31 {
-    display: inline-block;
-    width: 280px;
-    height: 40px;
-    text-align: center;
-    background: #cccccc;
-    left: 0px;
-    top: 1520px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 8%;
-    margin-right: 50%;
-    border-color: #cccccc;
-}
+/* .PatiosdeComida {
+  background-repeat: no-repeat;
+  background-position: 0cqmin;
+  background-size: contain;
+  position: relative;
+  background-image: url("Imagenes/Patios_de_comida.png");
+  width: 280px;
+  height: 120px;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 20px;
+  color: black;
+  border-radius: 30px;
+} */
 
 .container {
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .contenedor {
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-
+  display: flex;
+  justify-content: center;
+  gap: 200px;
 }
 
-scroll-container {
-
-    width: 330px;
-    height: 500px;
-    overflow: scroll;
-    scroll-behavior: smooth;
-    border-radius: 30px;
-    
-
-
+/* .scroll-container {
+  width: 330px;
+  height: 500px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  border-radius: 30px;
 }
 
-scroll-container::-webkit-scrollbar {
-    display: none;
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }
 
-
-scroll-container1 {
-
-    width: 440px;
-    height: 500px;
-
-    overflow: scroll;
-    scroll-behavior: smooth;
-   
-    border-radius: 30px;
+.scroll-container1 {
+  width: 440px;
+  height: 500px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  border-radius: 30px;
 }
 
-scroll-container1::-webkit-scrollbar {
-    display: none;
-}
-
-
-.LugarAte {
-    width: 400px;
-    height: 1586px;
-    text-align: center;
-    background: #999999;
-    position: relative;
-    scroll-snap-type: proximity;
-    border-radius: 30px;
-}
-
-.Lugar1 {
-    display: inline-block;
-    text-align: left;
-    padding-left: 4%;
-    padding: 0 3px;
-    font-size: 12px;
-    width: 340px;
-    height: 193px;
-    background: #cccccc;
-    left: 0px;
-    top: 20px;
-    border-radius: 15px;
-    position: absolute;
-    margin-left: 7%;
-
-    border-color: #cccccc;
-}
-
-.MAPA1 {
-    cursor: pointer;
-    width: 100px;
-    height: 30px;
-    color: white;
-    text-align: center;
-    position: relative;
-    padding: 0 16px;
-    font-size: 10px;
-    background-color: #2a5637;
-    border-radius: 10px;
-    margin-right: 10px;
-    margin-left: 210px;
-    margin-top: -5px;
-    margin-bottom: 34px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    /* Evitar que se repita la imagen */
-    background-position: 12cqmin;
-    background-size: contain;
-    /* Ajustar la imagen al tamaño del botón */
-    position: relative;
-    background-image: url('Imagenes/Googlemaps.png');
-}
-
-.Lugar2 {
-    display: inline-block;
-    text-align: left;
-    padding-left: 4%;
-    padding: 0 3px;
-    font-size: 12px;
-    width: 340px;
-    height: 210px;
-    background: #cccccc;
-    left: 0px;
-    top: 70px;
-    border-radius: 15px;
-    position: absolute;
-    margin-top: 40%;
-    margin-left: 7%;
-
-    border-color: #cccccc;
-}
-
-.MAPA2 {
-    cursor: pointer;
-    width: 100px;
-    height: 30px;
-    color: white;
-    text-align: center;
-    position: relative;
-    padding: 0 16px;
-    font-size: 10px;
-    background-color: #2a5637;
-    border-radius: 10px;
-    margin-right: 10px;
-    margin-left: 210px;
-    margin-top: -5px;
-    margin-bottom: 34px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    /* Evitar que se repita la imagen */
-    background-position: 12cqmin;
-    background-size: contain;
-    /* Ajustar la imagen al tamaño del botón */
-    position: relative;
-    background-image: url('Imagenes/Googlemaps.png');
-}
-
-.Lugar3 {
-    display: inline-block;
-    text-align: left;
-    padding-left: 4%;
-    padding: 0 3px;
-    font-size: 12px;
-    width: 340px;
-    height: 209px;
-    background: #cccccc;
-    top: 99px;
-    border-radius: 15px;
-    position: absolute;
-    margin-top: 90%;
-    margin-left: 7%;
-
-}
-
-.MAPA3 {
-    cursor: pointer;
-    width: 100px;
-    height: 30px;
-    color: white;
-    text-align: center;
-    position: relative;
-    padding: 0 16px;
-    font-size: 10px;
-    background-color: #2a5637;
-    border-radius: 10px;
-    margin-right: 10px;
-    margin-left: 210px;
-    margin-top: -5px;
-    margin-bottom: 34px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    /* Evitar que se repita la imagen */
-    background-position: 12cqmin;
-    background-size: contain;
-    /* Ajustar la imagen al tamaño del botón */
-    position: relative;
-    background-image: url('Imagenes/Googlemaps.png');
-}
-
-
-
-.delivery {
-    width: 940px;
-    height: 250px;
-    background-image: url("Imagenes/delivery.png");
-    background-repeat: no-repeat;
-    /* Evitar que se repita la imagen */
-    background-size: 3%;
-    padding: 0 16px;
-    display: flex;
-    background: #999999;
-
-    image-orientation: from-image;
-    border-radius: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 60px;
-    border-radius: 30px;
-    border-width: initial;
-    border-color: initial;
-    border-image: initial;
-    justify-content: center;
-}
-
-.imgDelivery {
-    width: 100%;
-    /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: max-content;
-    /* Ajusta la altura de la imagen de forma proporcional */
-    max-width: 1000px;
-    /* Limita el ancho máximo de la imagen a 500 píxeles */
-}
+.scroll-container1::-webkit-scrollbar {
+  display: none;
+} */
 
 /*PIE DE PAGINA */
 .piedepagina {
-    padding: 35px 60px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #d9d9d9;
-    mix-blend-mode: hard-light;
-    opacity: 10;
-  }
-  
-  .piedepagina-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    justify-items: center;
-  
-  }
-  .piedepagina-copy {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer-link {
-    color: black;
-    text-decoration: none;
-  }
-  
-  .links {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  
-  }
-  
-  .nav-item {
-    margin-left: 1rem;
-    display: inline-block;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: yellow;
-  }
-  
-  .redes-sociales {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .redes-sociales a {
-    color: black;
-    /* Color del icono */
-    font-size: 24px;
-    /* Tamaño del icono */
-    margin-right: 10px;
-    /* Espacio entre iconos */
-  }
-  
-  .redes-sociales a:last-child {
-    margin-right: 0;
-  }
+  padding: 35px 60px;
+  background: #d9d9d9;
+  mix-blend-mode: hard-light;
+  opacity: 10;
+}
+
+.piedepagina-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+}
+.piedepagina-copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-link {
+  color: black;
+  text-decoration: none;
+}
+
+.links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav-item {
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: yellow;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+
+.redes-sociales a {
+  color: black;
+  /* Color del icono */
+  font-size: 24px;
+  /* Tamaño del icono */
+  margin-right: 10px;
+  /* Espacio entre iconos */
+}
+
+.redes-sociales a:last-child {
+  margin-right: 0;
+}
