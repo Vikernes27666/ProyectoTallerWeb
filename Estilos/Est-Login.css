@@ -129,14 +129,18 @@ button {
 .login-icon {
   font-size: 70px;
   text-align: center;
-  display: block;
+  display: flex;
   margin-bottom: 5px;
+  
 }
+
 
 .login-container {
   text-align: center;
 
 }
+
+
 /*PIE DE PAGINA */
 .piedepagina {
   padding: 35px 60px;

@@ -73,7 +73,7 @@
   .inner-container {
     border-radius: 20px;
     width: 400px;
-    height: 650px;
+    height: 640px;
     overflow: hidden;
   }
   
@@ -137,6 +137,7 @@
   }
   .login-container{
     text-align: center;
+
   
   }
   
