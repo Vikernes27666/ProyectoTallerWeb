@@ -178,7 +178,9 @@ body {
   
   }
   
-
+  .icono-quejas {
+    color: black;
+   }
 
   .piedepagina {
     padding: 35px 60px;
