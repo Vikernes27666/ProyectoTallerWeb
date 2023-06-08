@@ -16,6 +16,17 @@ body {
     height: 1550px;
     
   }
+
+  .botonsalir {
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 40px;
+    padding: 13px 145px;
+    background-color: #acbb02;
+    color: white;
+  }
+
+
   
   .header {
     display: flex;
