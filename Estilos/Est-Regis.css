@@ -16,7 +16,7 @@
     font-family: sans-serif;
     font-size: 16px; /* El tamaño base por defecto de la fuentes en web es 16px*/
     margin: 0;
-    background-image: url("imagenes/fondo.jpg");
+    background-image: url(img/fondo23.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
