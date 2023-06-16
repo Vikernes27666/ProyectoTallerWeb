@@ -31,10 +31,10 @@
           <a class="nav-link" href="Promociones.html">PROMOCIÓN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Login.html">LOGIN</a>
+          <a class="nav-link" href="POSTlogin.php">LOGIN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Registro.html">REGISTRO</a>
+          <a class="nav-link" href="POSTregistro.php">REGISTRO</a>
         </li>
       </ul>
     </nav>
@@ -56,10 +56,10 @@
                <input type = "text" placeholder= "Apellido"name ="apellido"/>
             
               <! --Cambia el tipo a email para validación básica--!>
-                <input type= "email"placeholder = "Correo"name ="correo"/>
+                <input type= "email"placeholder = "Correo"name ="email"/>
 
               <! --Cambia el tipo a contraseña--!>
-            	<input type= password placeholder='Contraseña'name ='password'/>
+            	<input type= password placeholder='Contraseña'name ='pass'/>
              	  <! --Cambia el tipo a contraseña--!>
               <input type=password placeholder='Confirmar contraseña'name ='confirmapassword'/>
             

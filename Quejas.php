@@ -6,9 +6,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Problemas</title>
+  <title>Quejas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="Estilos/Est-Problemas.css" />
+  <link rel="stylesheet" href="Estilos/Est-Quejas.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -31,17 +31,19 @@
           <a class="nav-link" href="Promociones.html">PROMOCIÓN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Login.html">LOGIN</a>
+          <a class="nav-link" href="POSTlogin.php">LOGIN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Registro.html">REGISTRO</a>
+          <a class="nav-link" href="POSTregistro.php">REGISTRO</a>
         </li>
       </ul>
     </nav>
   </header>
 
 
-<!--Desarrollo de Problemas  -->
+
+
+<!--Desarrollo de Quejas  -->
 <main>
     <div class="login-container">
         <div class="inner-container">
@@ -49,23 +51,24 @@
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
                 <div class="sales-wrapper">
                     <!-- Iconos -->
-                    <a class="icono-quejas" href="Registro_Ventas.html"><i class="fas fa-file-invoice-dollar sales-icon"></i></a>
-                    <a class="icono-quejas" href="Problemas.html"><i class='fas fa-exclamation-triangle sales-icon1'></i></a>
-                    <a class="icono-quejas" href="Quejas.html"><i class='fas fa-comment-dots sales-icon2'></i></a>
-                    <a class="icono-quejas" href="Permisos.html"><i class='fas fa-user-clock sales-icon2'></i></a>
-                    <!-- Formulario para reportar problemas -->
-                    <form class="sales-form" method = "post" action = "php/Problemas.php"> 
-                        <h1>Reporte de Problemas</h1>
+                    <a class="icono-quejas" href="Registro_Ventas.php"><i class="fas fa-file-invoice-dollar sales-icon"></i></a>
+                    <a class="icono-quejas" href="Problemas.php"><i class='fas fa-exclamation-triangle sales-icon1'></i></a>
+                    <a class="icono-quejas" href="Quejas.php"><i class='fas fa-comment-dots sales-icon2'></i></a>
+                    <a class="icono-quejas" href="Permisos.php"><i class='fas fa-user-clock sales-icon2'></i></a>
+                      <form method = "post" action = "php/Permisos.php"> 
+                        <!-- Cada input debe tener un name asociado -->
+                        <h1>Registro de Quejas</h1>
+                        <input type ="text" placeholder= "Nombre del empleado"name ="EmployeeName"/>
                         <select name ="Category">
                             <option disabled selected>Selecciona una categoría...</option>
-                            <option>Atención al cliente</option>
-                            <option>Comida e ingredientes</option >
-                            <option>Problemas con el personal</option>
-                            <option>Regulaciones locales y permisos</option >
-                            <option>Infraestructura y mantenimiento</option>
+                            <option>Falta de recursos</option>
+                            <option>Dificultades laborales</option >
+                            <option>Mala comunicación interna</option>
+                            <option>Conflictos con supervisores o compañeros</option >
                             <option>Otros</option >                               
                         </select>
-                        <textarea rows="5" cols="" style="-webkit-appearance: none; background-color:#018d50;border:none;margin-top:20px;padding-left:10px;padding-right:10px;" placeholder= "Descripción del problema..."name ="ProblemDescription"></textarea>
+                        <!--Campo para ingresar la descripción del problema-->
+                        <textarea rows="5" cols="" style="-webkit-appearance: none; background-color:#018d50;border:none;margin-top:20px;padding-left:10px;padding-right:10px;" placeholder= "Descripción de la queja..."name ="ComplaintDescription"></textarea>
                         <!-- Botón para guardar el reporte -->
                         <button type="submit">Guardar</button>
                         <!--Boton para salir o cancelar-->
@@ -75,7 +78,6 @@
             </div>
         </div>
     </div>
-</main>
 
 
 

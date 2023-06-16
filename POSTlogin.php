@@ -31,10 +31,10 @@
           <a class="nav-link" href="Promociones.html">PROMOCIÓN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Login.html">LOGIN</a>
+          <a class="nav-link" href="POSTlogin.php">LOGIN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Registro.html">REGISTRO</a>
+          <a class="nav-link" href="POSTregistro.php">REGISTRO</a>
         </li>
       </ul>
     </nav>
@@ -53,12 +53,12 @@
              <form class="login-form" method = "post" action = "php/login.php"> <!--  Los nuevos atributos agregados-->
                <!-- Cada input debe tener un name asociado -->
                <h1>Bienvenido</h1>
-               <input type="text" placeholder= "Usuario"name ="username" />
-               <input type ="password" placeholder= "Contraseña"name ="password"/>
+               <input type="text" placeholder= "Usuario"name ="email" />
+               <input type ="password" placeholder= "Contraseña"name ="pass"/>
                <!--  El tipo del campo contraseña debe ser password -->
                <button type="submit" name = "login">Login</button> <!-- Agregamos el atributo de nombre al botón-->
              </form>
-             <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p><!-- Se corrigió la etiqueta cerrada -->
+             <p>¿No tienes cuenta? <a href="registro.php">Regístrate</a></p><!-- Se corrigió la etiqueta cerrada -->
            </div>
          </div>
        </div>
