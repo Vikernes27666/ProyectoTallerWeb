@@ -170,7 +170,7 @@ new-header-class .shopping span{
   left: 100%;
   top:0;
   width: 500px;
-  background-color: #453E3B;
+  background-color: black;
   height: 750px;
   transition: 0.5s;
   z-index: 1;
@@ -183,7 +183,7 @@ new-header-class .shopping span{
  transform: translateX(-200px);
 }
 .card h1{
-  color: #E8BC0E;
+  color: #008e4f;
   font-weight: 100;
   margin: 0;
   padding: 0 20px;
@@ -210,7 +210,7 @@ new-header-class .shopping span{
   cursor: pointer;
 }
 .card .checkOut div:nth-child(2){
-  background-color: #1C1F25;
+  background-color: #008e4f;
   color: #fff;
 }
 .listCard li{

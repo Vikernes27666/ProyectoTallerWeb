@@ -27,7 +27,7 @@ $resultado_consulta=mysqli_stmt_execute($stmt); // Ejecutar consulta preparada
 
 if(mysqli_num_rows(mysqli_stmt_get_result($stmt)) > 0){ // Verificar si se encontraron filas en resultado
     
-    echo "<p>Bienvenido!</p>"; // Acceso concedido
+    header('Location: ../html/pedidos.html');
 
     
 } else{

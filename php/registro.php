@@ -29,7 +29,7 @@ mysqli_stmt_bind_param($stmt,'ssss',$nombre_usuario,$apellido_usuario,$email_usu
 
 if(mysqli_stmt_execute($stmt)){
     
-    echo "<p>Usuario registrado exitosamente!</p>";
+    header('Location: ../html/Bienvenida.html');
     
 } else{
     echo "<p>Error al registrar usuario:</p>" . mysqli_error($conn);

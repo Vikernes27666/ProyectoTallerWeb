@@ -49,6 +49,96 @@ let products = [
         name: 'Parrilla Norkys',
         image: '6.PNG',
         price: 60
+    },
+    {
+        id: 4,
+        name: 'Chaufa Brasa',
+        image: '4.PNG',
+        price: 25
+    },
+    {
+        id: 5,
+        name: 'Gaseosa 1.5 L',
+        image: '5.PNG',
+        price: 6
+    },
+    {
+        id: 6,
+        name: 'Parrilla Norkys',
+        image: '6.PNG',
+        price: 60
+    },
+    {
+        id: 4,
+        name: 'Chaufa Brasa',
+        image: '4.PNG',
+        price: 25
+    },
+    {
+        id: 5,
+        name: 'Gaseosa 1.5 L',
+        image: '5.PNG',
+        price: 6
+    },
+    {
+        id: 6,
+        name: 'Parrilla Norkys',
+        image: '6.PNG',
+        price: 60
+    },
+    {
+        id: 4,
+        name: 'Chaufa Brasa',
+        image: '4.PNG',
+        price: 25
+    },
+    {
+        id: 5,
+        name: 'Gaseosa 1.5 L',
+        image: '5.PNG',
+        price: 6
+    },
+    {
+        id: 6,
+        name: 'Parrilla Norkys',
+        image: '6.PNG',
+        price: 60
+    },
+    {
+        id: 4,
+        name: 'Chaufa Brasa',
+        image: '4.PNG',
+        price: 25
+    },
+    {
+        id: 5,
+        name: 'Gaseosa 1.5 L',
+        image: '5.PNG',
+        price: 6
+    },
+    {
+        id: 6,
+        name: 'Parrilla Norkys',
+        image: '6.PNG',
+        price: 60
+    },
+    {
+        id: 4,
+        name: 'Chaufa Brasa',
+        image: '4.PNG',
+        price: 25
+    },
+    {
+        id: 5,
+        name: 'Gaseosa 1.5 L',
+        image: '5.PNG',
+        price: 6
+    },
+    {
+        id: 6,
+        name: 'Parrilla Norkys',
+        image: '6.PNG',
+        price: 60
     }
 ];
 let listCards  = [];
@@ -57,7 +147,7 @@ function initApp(){
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="image/${value.image}">
+            <img src="../image/${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
             <button onclick="addToCard(${key})">AGREGAR</button>`;
@@ -83,7 +173,7 @@ function reloadCard(){
         if(value != null){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                <div><img src="image/${value.image}"/></div>
+                <div><img src="../image/${value.image}"/></div>
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString()}</div>
                 <div>
