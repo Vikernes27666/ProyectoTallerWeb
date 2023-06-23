@@ -1,0 +1,80 @@
+.catcocina {
+    background: #05e3be;
+    color: #5a5c69;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #5a5c69;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    
+    }
+    .catlimpieza {
+    background: #c2b7f2;
+    color: #5a5c69;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #5a5c69;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    
+    }
+    .catenbalaje {
+    background: #C9F2B7;
+    color: #5a5c69;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #5a5c69;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    }
+    .catotros {
+    background: #f9bd93;
+    color: #5a5c69;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #5a5c69;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    
+    }
+
+    .soon 
+    {
+        background: #eff2b7;
+    color: #5a5c69;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #5a5c69;
+    border-radius: 6px;
+    text-align:center;
+    width: 97%;
+    margin: 20px; 
+    display: inline-block;
+    
+    }
+    /* colores para tabla */
+    .cocina {
+         font-weight: bold; padding: 15px; border-left:20px solid #05e3be;
+    }
+    .limpieza {
+         font-weight: bold; padding: 15px; border-left:20px solid #c2b7f2;
+    }
+    .enbalaje {
+        font-weight: bold; padding: 15px; border-left:20px solid #C9F2B7;
+    }
+    .otros {
+        font-weight: bold; padding: 15px; border-left:20px solid #fbf4136b; 
+    }
+  

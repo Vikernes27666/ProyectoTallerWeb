@@ -1,10 +1,13 @@
+// Agrega esta variable al inicio para obtener la referencia al elemento modal g
+let modal = document.getElementById('modal');
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCard');
 let body = document.querySelector('body');
-let total = document.querySelector('.total');
+let total = document.getElementById('total');
 let quantity = document.querySelector('.quantity');
+const amountFromForm = document.getElementById('amount')
 
 openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
@@ -142,6 +145,7 @@ let products = [
     }
 ];
 let listCards  = [];
+
 function initApp(){
     products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
@@ -149,11 +153,12 @@ function initApp(){
         newDiv.innerHTML = `
             <img src="../image/${value.image}">
             <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
+            <div class="price">S/ ${value.price.toLocaleString()}</div>
             <button onclick="addToCard(${key})">AGREGAR</button>`;
         list.appendChild(newDiv);
     })
 }
+
 initApp();
 function addToCard(key){
     if(listCards[key] == null){
@@ -163,6 +168,7 @@ function addToCard(key){
     }
     reloadCard();
 }
+
 function reloadCard(){
     listCard.innerHTML = '';
     let count = 0;
@@ -175,7 +181,7 @@ function reloadCard(){
             newDiv.innerHTML = `
                 <div><img src="../image/${value.image}"/></div>
                 <div>${value.name}</div>
-                <div>${value.price.toLocaleString()}</div>
+                <div>S/ ${value.price.toLocaleString()}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
@@ -184,9 +190,11 @@ function reloadCard(){
                 listCard.appendChild(newDiv);
         }
     })
+
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
 }
+
 function changeQuantity(key, quantity){
     if(quantity == 0){
         delete listCards[key];
@@ -196,3 +204,32 @@ function changeQuantity(key, quantity){
     }
     reloadCard();
 }
+
+
+/*-*/
+let closeBtn = document.getElementsByClassName('close')[0];
+// Agrega esta variable para obtener la referencia al elemento de confirmación de pago
+let confirmPaymentBtn = document.getElementById('confirmPayment');
+
+// Agrega el siguiente código al final de la función reloadCard()
+confirmPaymentBtn.addEventListener('click', () => {
+  // Aquí puedes realizar las acciones necesarias para procesar el pago
+  // Puedes mostrar mensajes de confirmación, realizar llamadas a API, etc.
+  // Por ahora, simplemente mostraremos una alerta con el mensaje "Pago confirmado"
+  alert('Pago confirmado');
+  // Cierra la ventana modal
+  modal.style.display = 'none';
+});
+
+// Agrega el siguiente código para mostrar la ventana modal al hacer clic en el total
+total.addEventListener('click', () => {
+  // Abre la ventana modal
+  modal.style.display = 'block';
+  amountFromForm.value = total.textContent;
+});
+
+// Agrega el siguiente código para cerrar la ventana modal al hacer clic en el botón de cierre
+closeBtn.addEventListener('click', () => {
+  // Cierra la ventana modal
+  modal.style.display = 'none';
+});
