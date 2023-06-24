@@ -1,3 +1,5 @@
+
+
 <?php
 require '../Model/_db.php';
 // Verificar si se recibió el ID del registro a eliminar

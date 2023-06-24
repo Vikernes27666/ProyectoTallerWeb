@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <a class="catcocina" href="productosCategoria.php?categoria=cocina">
-                    Suministros de cocina
+                    Suministros de cocina ("pollo a la brasa")
                 </a>
             </div>
 

@@ -66,7 +66,7 @@ if($actualsesion == null || $actualsesion == ''){
 <li class="nav-item">
     <a class="nav-link collapsed" href="#">
         <span class="material-icons">book</span>
-        <span>Formularios</span>
+        <span>Reservas</span>
     </a>
 </li>
 

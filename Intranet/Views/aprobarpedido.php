@@ -8,14 +8,14 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     // Actualizar el estado del pedido a "Aprobado" en la base de datos
     $sql = "UPDATE pago SET estado = 'Aprobado' WHERE id = $id";
 
-    if (mysqli_query($conn, $sql)) {
+    if (mysqli_query($conexion, $sql)) {
         echo "El pedido se ha aprobado correctamente.";
     } else {
-        echo "Error al aprobar el pedido: " . mysqli_error($conn);
+        echo "Error al aprobar el pedido: " . mysqli_error($conexion);
     }
 } else {
     echo "ID de pedido no válido.";
 }
 
-mysqli_close($conn);
+mysqli_close($conexion);
 ?>
