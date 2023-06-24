@@ -42,36 +42,76 @@
 
 
 <!-- Desarrollo del Registro -->
+<!-- Desarrollo del Registro -->
 <main>
-  <div class="login-wrapper">
-    <div class="inner-container">
-      <div class="box">
-        <div class="login-container">
-          <i class="fas fa-user login-icon"></i> 
-          <!-- Asegúrate de que 'register.php' exista y tenga la funcionalidad adecuada -->
-          <form action="../php/registro.php" method="post" class="login-form"> 
-            <h1>Registro</h1>
-            <!-- Añade atributos name a todos los campos input-->
-            <input type= "text" placeholder = "Nombre"name ="nombre"/>
-               <input type = "text" placeholder= "Apellido"name ="apellido"/>
-            
-              <! --Cambia el tipo a email para validación básica--!>
-                <input type= "email"placeholder = "Correo"name ="email"/>
-
-              <! --Cambia el tipo a contraseña--!>
-            	<input type= password placeholder='Contraseña'name ='pass'/>
-             	  <! --Cambia el tipo a contraseña--!>
-              <input type=password placeholder='Confirmar contraseña'name ='confirmapassword'/>
-            
-                  <button type = submit >Registrar</button>
-
+    <div class="login-wrapper">
+      <div class="inner-container">
+        <div class="box">
+          <div class="login-container">
+            <i class="fas fa-user login-icon"></i>
+            <!-- Asegúrate de que 'register.php' exista y tenga la funcionalidad adecuada -->
+            <form action="../php/registro.php" method="post" class="login-form" onsubmit="return validateForm()">
+              <h1>Registro</h1>
+              <!-- Añade atributos name a todos los campos input-->
+              <input type="text" placeholder="Nombre" name="nombre" />
+              <input type="text" placeholder="Apellido" name="apellido" />
+  
+              <!-- Cambia el tipo a email para validación básica -->
+              <input type="email" placeholder="Correo" name="email" />
+  
+              <!-- Cambia el tipo a contraseña -->
+              <input type="password" placeholder="Contraseña" name="pass" />
+              
+              <!-- Cambia el tipo a contraseña -->
+              <input type="password" placeholder="Confirmar contraseña" name="confirmapassword" />
+  
+              <button type="submit">Registrar</button>
             </form>
-                  <p><span>Ayuda</span></p>
-              </div>
+            <p><span>Ayuda</span></p>
           </div>
+        </div>
+      </div>
     </div>
   </main>
-
+  
+  <script>
+    function validateForm() {
+      var inputs = document.getElementsByTagName('input');
+      var isFormValid = true;
+      var password = '';
+      var confirmPassword = '';
+  
+      for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === '') {
+          isFormValid = false;
+          break;
+        }
+  
+        if (inputs[i].name === 'pass') {
+          password = inputs[i].value;
+        }
+  
+        if (inputs[i].name === 'confirmapassword') {
+          confirmPassword = inputs[i].value;
+        }
+      }
+  
+      if (!isFormValid) {
+        alert('Por favor, complete todos los campos.');
+        return false;
+      }
+  
+      if (password !== confirmPassword) {
+        alert('Las contraseñas no son iguales. Por favor, verifique.');
+        return false;
+      }
+  
+      if (password.length < 6) {
+        alert('La contraseña es demasiado corta. Debe tener al menos 6 caracteres.');
+        return false;
+      }
+    }
+  </script>
 
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-06-2023 a las 05:43:30
+-- Tiempo de generación: 24-06-2023 a las 08:28:13
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -45,7 +45,8 @@ CREATE TABLE `pago` (
 --
 
 INSERT INTO `pago` (`id`, `card_number`, `card_name`, `expiry_date`, `cvv`, `delivery_option`, `address`, `first_name`, `last_name`, `amount`) VALUES
-(2, '1111111111111111', 'BCP', '111', '111', 'delivery', 'lima', 'admin', 'admin', 90.00);
+(2, '1111111111111111', 'BCP', '111', '111', 'delivery', 'lima', 'admin', 'admin', 90.00),
+(4, '2557488089987634', 'BCP', '02', '552', 'pickup', '', 'rick', 'G', 160.00);
 
 -- --------------------------------------------------------
 
@@ -169,7 +170,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `pago`
 --
 ALTER TABLE `pago`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -181,13 +182,13 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

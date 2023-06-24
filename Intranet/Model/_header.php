@@ -36,7 +36,7 @@ if($actualsesion == null || $actualsesion == ''){
 </a>
 <hr class="sidebar-divider my-0">
 <li class="nav-item active">
-    <a class="nav-link" href="">
+    <a class="nav-link" href="dashboard.php">
         <i class="material-icons-outlined"></i>
         <span>Dashboard</span></a>
 </li>
