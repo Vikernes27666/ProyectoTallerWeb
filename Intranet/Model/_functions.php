@@ -2,27 +2,21 @@
 
 require_once ("../Model/_db.php");
 
-
-if(isset($_POST['accion'])){ 
-    switch($_POST['accion']){
+if(isset($_POST['accion'])) { 
+    switch($_POST['accion']) {
         case 'eliminar_producto':
             eliminar_producto();
-
-        break;        
+            break;
         case 'editar_producto':
-        editar_producto();
-
-        break;
-
+            editar_producto();
+            break;
         case 'insertar_productos':
-        insertar_productos();
-
-        break;    
+            insertar_productos();
+            break;
     }
-
 }
 
-function insertar_productos(){
+function insertar_productos() {
 
     global $conexion;
     extract($_POST);

@@ -1,80 +1,98 @@
 .catcocina {
-    background: #05e3be;
-    color: #5a5c69;
+    background: linear-gradient(to right, #05e3be, #06c8e3);
+    color: #000000;
     font-weight: bold;
     padding: 15px;
-    border: 2px solid #5a5c69;
+    border: none;
     border-radius: 6px;
-    text-align:center;
+    text-align: center;
     width: 90%;
     margin: 20px;
     display: inline-block;
-    
-    }
-    .catlimpieza {
-    background: #c2b7f2;
-    color: #5a5c69;
-    font-weight: bold;
-    padding: 15px;
-    border: 2px solid #5a5c69;
-    border-radius: 6px;
-    text-align:center;
-    width: 90%;
-    margin: 20px;
-    display: inline-block;
-    
-    }
-    .catenbalaje {
-    background: #C9F2B7;
-    color: #5a5c69;
-    font-weight: bold;
-    padding: 15px;
-    border: 2px solid #5a5c69;
-    border-radius: 6px;
-    text-align:center;
-    width: 90%;
-    margin: 20px;
-    display: inline-block;
-    }
-    .catotros {
-    background: #f9bd93;
-    color: #5a5c69;
-    font-weight: bold;
-    padding: 15px;
-    border: 2px solid #5a5c69;
-    border-radius: 6px;
-    text-align:center;
-    width: 90%;
-    margin: 20px;
-    display: inline-block;
-    
-    }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-    .soon 
-    {
-        background: #eff2b7;
-    color: #5a5c69;
+.catlimpieza {
+    background: linear-gradient(to right, #c2b7f2, #847fe2);
+    color: #000000;
     font-weight: bold;
     padding: 15px;
-    border: 2px solid #5a5c69;
+    border: none;
     border-radius: 6px;
-    text-align:center;
-    width: 97%;
-    margin: 20px; 
+    text-align: center;
+    width: 90%;
+    margin: 20px;
     display: inline-block;
-    
-    }
-    /* colores para tabla */
-    .cocina {
-         font-weight: bold; padding: 15px; border-left:20px solid #05e3be;
-    }
-    .limpieza {
-         font-weight: bold; padding: 15px; border-left:20px solid #c2b7f2;
-    }
-    .enbalaje {
-        font-weight: bold; padding: 15px; border-left:20px solid #C9F2B7;
-    }
-    .otros {
-        font-weight: bold; padding: 15px; border-left:20px solid #fbf4136b; 
-    }
-  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.catenbalaje {
+    background: linear-gradient(to right, #C9F2B7, #68e877);
+    color: #000000;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.catotros {
+    background: linear-gradient(to right, #f9bd93, #f38e77);
+    color: #000000;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.soon {
+    background: linear-gradient(to right, #eff2b7, #f8fa95);
+    color: #000000;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    width: 97%;
+    margin: 20px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* colores para tabla */
+.cocina {
+    font-weight: bold;
+    padding: 15px;
+    border-left: 20px solid #05e3be;
+    color: #000000;
+}
+
+.limpieza {
+    font-weight: bold;
+    padding: 15px;
+    border-left: 20px solid #c2b7f2;
+    color: #000000;
+}
+
+.enbalaje {
+    font-weight: bold;
+    padding: 15px;
+    border-left: 20px solid #C9F2B7;
+    color: #000000;
+}
+
+.otros {
+    font-weight: bold;
+    padding: 15px;
+    border-left: 20px solid #f9bd93;
+    color: #000000;
+}

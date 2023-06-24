@@ -3,6 +3,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require '../Model/_header.php' ?>
+<style>
+  .problema{
+    background-color: <?php echo $color?>;
+    color: #000000;
+  }
+</style>
 <div id= "content">
   <section>
     <div class="container mt-5">
@@ -32,30 +38,26 @@
 
 <?php
 
-$sql = "SELECT * FROM productos";
-$productos = mysqli_query($conexion, $sql);
-if($productos -> num_rows > 0){
-foreach($productos as $key => $row ){
-?>
-<!--funcion y estilos para celdas en error-->
-<?php
+  $sql = "SELECT * FROM productos";
+  $productos = mysqli_query($conexion, $sql);
+  if($productos -> num_rows > 0){
+  foreach($productos as $key => $row ){
+  ?>
+  <!--funcion y estilos para celdas en error-->
+  <?php
 
-if ($row['cantidad'] <= $row['cantidad_min']) {
-  $color = '#F78E8E';
-  $clase = 'problema';
-} else {
-  $clase = 'correcto';
-}
- 
-// ...
+  if ($row['cantidad'] <= $row['cantidad_min']) {
+    $color = '#F78E8E';
+    $clase = 'problema';
+  } else {
+    $clase = 'correcto';
+  }
+  
+  // ...
 
 ?>
-<style>
-      .problema{
-        background-color: <?php echo $color?>;
-        color: #000000;
-    }
-</style>
+
+
 <!-- empieza la tabla-->
 <tr>
 <td <?php echo  'class="'.$row['categorias'] .'"'; ?>><?php echo $row['id']; ?></td>
@@ -79,7 +81,7 @@ if ($row['cantidad'] <= $row['cantidad_min']) {
     </div>
   </a>
   <a>|</a>
-  <a href="producto_eliminar.php?id=<?php echo $row['id']?>">
+  <a href="producto_eliminar.php?id=<?= $row['id']?>">
     <div>
     Eliminar
     </div>

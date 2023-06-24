@@ -5,7 +5,7 @@
 <body>
 
 <div class="container">
-<div class="col-sm-6 offset-3 mt-5">
+<div>
 <form action="../Model/_functions.php" method="POST"  enctype="multipart/form-data">
 
 <div class="row">
@@ -25,7 +25,7 @@
 </div>
 
 
-<div class="col-sm-6">
+<div>
 <div class="mb-3">
 <label for="precio" class="form-label">Precio *</label>
 <input type="number"  id="precio" name="precio" class="form-control" required>

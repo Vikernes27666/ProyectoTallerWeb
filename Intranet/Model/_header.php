@@ -58,7 +58,7 @@ if($actualsesion == null || $actualsesion == ''){
     </a>
 </li>
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#">
+    <a class="nav-link collapsed" href="pedidos.php">
         <span class="material-icons">book</span>
         <span>  Pedidos</span>
     </a>
@@ -77,7 +77,7 @@ if($actualsesion == null || $actualsesion == ''){
 <li class="nav-item">
     <a class="nav-link collapsed" href="usuariosindex.php">
         <span class="material-icons">people</span>
-        <span>Información usuario</span>
+        <span>Usuarios</span>
     </a>
 </li>
 <li class="nav-item">
