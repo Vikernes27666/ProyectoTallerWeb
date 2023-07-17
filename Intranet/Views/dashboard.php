@@ -7,40 +7,41 @@
     <style>
         .dashboard {
             display: flex;
-            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-            justify-content: center; /* Centra los elementos horizontalmente */
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .chart-box {
             width: 400px;
-            max-width: 100%; /* Ajusta el ancho máximo a la pantalla */
-            height: 400px;
+            max-width: 100%;
+            height: 500px;
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: #028e4f; /* Color de fondo #028e4f */
+            background-color: #028e4f;
             margin: 10px;
             padding: 20px;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
         }
 
+
         .chart-title {
             font-size: 18px;
             font-weight: bold;
-            color: #000000; /* Color de letra negro */
+            color: #000000;
             margin-bottom: 10px;
         }
 
         .chart-legend {
-            color: #000000; /* Color de letra negro */
+            color: #000000;
         }
 
         @media (max-width: 768px) {
             .chart-box {
-                width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+                width: 90%;
             }
 
             .dashboard {
-                justify-content: flex-start; /* Vuelve a justificar los elementos a la izquierda */
+                justify-content: flex-start;
             }
         }
     </style>
@@ -65,11 +66,61 @@
         </div>
     </div>
     <script>
+        <?php
+        // Conexión a la base de datos (asegúrate de que esto esté incluido y funcionando correctamente)
+
+        // Consulta para obtener los datos de precios desde la tabla de productos
+        $queryPrecios = "SELECT precio, categorias FROM productos";
+        $resultPrecios = mysqli_query($conexion, $queryPrecios);
+
+        // Crear un array para almacenar los precios
+        $precios = array();
+
+        // Recorrer los resultados y almacenar los precios en el array
+        while ($rowPrecio = mysqli_fetch_assoc($resultPrecios)) {
+            $precios[$rowPrecio['categorias']][] = $rowPrecio['precio'];
+        }
+
+        // Consulta para obtener los datos de categorías desde la tabla de productos
+        $queryCategorias = "SELECT categorias FROM productos GROUP BY categorias";
+        $resultCategorias = mysqli_query($conexion, $queryCategorias);
+
+        // Crear un array para almacenar las categorías y la cantidad de productos por categoría
+        $categorias = array();
+        $cantidadProductosPorCategoria = array();
+
+        // Recorrer los resultados y almacenar las categorías en el array
+        while ($rowCategorias = mysqli_fetch_assoc($resultCategorias)) {
+            $categorias[] = $rowCategorias['categorias'];
+            $cantidadProductosPorCategoria[] = count($precios[$rowCategorias['categorias']]);
+        }
+
+        // Consulta para obtener los datos de pedidos desde la tabla de pago
+        $queryPedidos = "SELECT delivery_option, COUNT(*) as cantidad FROM pago GROUP BY delivery_option";
+        $resultPedidos = mysqli_query($conexion, $queryPedidos);
+
+        // Crear arrays para almacenar los datos de los pedidos
+        $opcionesEntrega = array();
+        $cantidadPedidos = array();
+
+        // Recorrer los resultados y almacenar los datos en los arrays
+        while ($rowPedidos = mysqli_fetch_assoc($resultPedidos)) {
+            $opcionesEntrega[] = $rowPedidos['delivery_option'];
+            $cantidadPedidos[] = $rowPedidos['cantidad'];
+        }
+
+        // Consulta para obtener los datos de usuarios desde la tabla de user
+        $queryUsuarios = "SELECT COUNT(*) as cantidad FROM user";
+        $resultUsuarios = mysqli_query($conexion, $queryUsuarios);
+        $rowUsuarios = mysqli_fetch_assoc($resultUsuarios);
+        $cantidadUsuarios = $rowUsuarios['cantidad'];
+        ?>
+
         var chartData1 = {
-            labels: ['Label 1', 'Label 2', 'Label 3'],
+            labels: <?php echo json_encode($categorias); ?>,
             datasets: [{
-                label: 'Dataset 1',
-                data: [10, 20, 30],
+                label: 'Cantidad de productos',
+                data: <?php echo json_encode($cantidadProductosPorCategoria); ?>,
                 backgroundColor: 'rgba(75, 192, 192, 0.8)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 2
@@ -77,21 +128,25 @@
         };
 
         var chartData2 = {
-            labels: ['Label A', 'Label B', 'Label C'],
+            labels: <?php echo json_encode($categorias); ?>,
             datasets: [{
-                label: 'Dataset 2',
-                data: [40, 50, 60],
-                backgroundColor: 'rgba(255, 99, 132, 0.8)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 2
+                label: 'Cantidad de productos por categoría',
+                data: <?php echo json_encode($cantidadProductosPorCategoria); ?>,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 205, 86, 0.8)',
+                    'rgba(128, 0, 128, 0.8)', // Cambio de color a morado para la categoría "Cocina"
+                    // Agrega más colores aquí si tienes más categorías
+                ],
             }]
         };
 
         var chartData3 = {
-            labels: ['Label X', 'Label Y', 'Label Z'],
+            labels: <?php echo json_encode($opcionesEntrega); ?>,
             datasets: [{
-                label: 'Dataset 3',
-                data: [15, 25, 35],
+                label: 'Cantidad de pedidos',
+                data: <?php echo json_encode($cantidadPedidos); ?>,
                 backgroundColor: 'rgba(54, 162, 235, 0.8)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 2
@@ -99,10 +154,10 @@
         };
 
         var chartData4 = {
-            labels: ['Label M', 'Label N', 'Label O'],
+            labels: ['Usuarios'],
             datasets: [{
-                label: 'Dataset 4',
-                data: [45, 55, 65],
+                label: 'Cantidad de usuarios',
+                data: [<?php echo $cantidadUsuarios; ?>],
                 backgroundColor: 'rgba(255, 205, 86, 0.8)',
                 borderColor: 'rgba(255, 205, 86, 1)',
                 borderWidth: 2
@@ -122,7 +177,7 @@
                             display: false
                         },
                         ticks: {
-                            color: '#000000' /* Color de letra negro */
+                            color: '#000000'
                         }
                     },
                     y: {
@@ -130,7 +185,7 @@
                             color: 'rgba(255, 255, 255, 0.1)'
                         },
                         ticks: {
-                            color: '#000000', /* Color de letra negro */
+                            color: '#000000',
                             beginAtZero: true
                         }
                     }
@@ -152,9 +207,9 @@
                 maintainAspectRatio: false,
                 plugins: {
                     legend: {
-                        position: 'bottom',
+                        position: 'top',
                         labels: {
-                            color: '#000000' /* Color de letra negro */
+                            color: '#000000'
                         }
                     }
                 }
@@ -163,33 +218,17 @@
 
         var ctx3 = document.getElementById('chart3').getContext('2d');
         new Chart(ctx3, {
-            type: 'line',
+            type: 'doughnut',
             data: chartData3,
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                scales: {
-                    x: {
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        },
-                        ticks: {
-                            color: '#000000' /* Color de letra negro */
-                        }
-                    },
-                    y: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            color: '#000000', /* Color de letra negro */
-                            beginAtZero: true
-                        }
-                    }
-                },
                 plugins: {
                     legend: {
-                        display: false
+                        position: 'top',
+                        labels: {
+                            color: '#000000'
+                        }
                     }
                 }
             }
@@ -208,7 +247,7 @@
                             color: 'rgba(255, 255, 255, 0.1)'
                         },
                         ticks: {
-                            color: '#000000' /* Color de letra negro */
+                            color: '#000000'
                         }
                     },
                     y: {
@@ -216,7 +255,7 @@
                             color: 'rgba(255, 255, 255, 0.1)'
                         },
                         ticks: {
-                            color: '#000000', /* Color de letra negro */
+                            color: '#000000',
                             beginAtZero: true
                         }
                     }
@@ -225,7 +264,7 @@
                     legend: {
                         position: 'top',
                         labels: {
-                            color: '#000000' /* Color de letra negro */
+                            color: '#000000'
                         }
                     }
                 }

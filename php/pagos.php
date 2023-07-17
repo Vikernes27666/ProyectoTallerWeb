@@ -6,11 +6,11 @@ $expiryDate = $_POST['expiryDate'];
 $cvv = $_POST['cvv'];
 $deliveryOption = $_POST['deliveryOption'];
 $address = $_POST['address'];
-// $homeAddress = $_POST['homeAddress'];
+$email = $_POST['email'];
+$phoneNumber = $_POST['phoneNumber'];
 $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $amount = $_POST['amount'];
-// $deliveryInstructions = $_POST['deliveryInstructions'];
 
 // Realizar la conexión a la base de datos
 $servername = "localhost";
@@ -26,8 +26,8 @@ if ($conn->connect_error) {
 }
 
 // Insertar los datos en la base de datos
-$sql = "INSERT INTO pago (card_number, card_name, expiry_date, cvv, delivery_option, address, first_name, last_name, amount)
-        VALUES ('$cardNumber', '$cardName', '$expiryDate', '$cvv', '$deliveryOption', '$address', '$firstName', '$lastName', '$amount')";
+$sql = "INSERT INTO pago (card_number, card_name, expiry_date, cvv, delivery_option, address, email, phone_number, first_name, last_name, amount)
+        VALUES ('$cardNumber', '$cardName', '$expiryDate', '$cvv', '$deliveryOption', '$address', '$email', '$phoneNumber', '$firstName', '$lastName', '$amount')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Los datos se han guardado correctamente en la base de datos.";

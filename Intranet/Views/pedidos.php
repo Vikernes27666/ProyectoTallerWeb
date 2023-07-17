@@ -36,6 +36,8 @@
                                         <th>Address</th>
                                         <th>First Name</th>
                                         <th>Last Name</th>
+                                        <th>Email</th>
+                                        <th>Phone Number</th>
                                         <th>Amount</th>
                                         <th>Actions</th>
                                     </tr>
@@ -58,10 +60,12 @@
                                                     <td><?php echo $row['address']; ?></td>
                                                     <td><?php echo $row['first_name']; ?></td>
                                                     <td><?php echo $row['last_name']; ?></td>
+                                                    <td><?php echo $row['email']; ?></td>
+                                                    <td><?php echo $row['phone_number']; ?></td>
                                                     <td><?php echo $row['amount']; ?></td>
                                                     <td>
                                                         <?php if ($row['status'] != 'Aprobado') { ?>
-                                                            <a href="aprobarpedidos.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-primary">Aprobar</a>
+                                                            <a href="aprobarpedido.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-primary">Aprobar</a>
                                                         <?php } ?>
                                                         <a href="eliminarpedido.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger">Eliminar</a>
                                                     </td>
@@ -71,7 +75,7 @@
                                         } else {
                                         ?>
                                             <tr class="text-center">
-                                                <td colspan="12">No existen pedidos</td>
+                                                <td colspan="13">No existen pedidos</td>
                                             </tr>
                                         <?php
                                         }

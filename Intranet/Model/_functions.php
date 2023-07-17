@@ -39,7 +39,7 @@ function insertar_productos() {
 
     mysqli_query($conexion, $consulta);
     
-    header("Location: ../views/usuarios/");
+    header("Location: ../Views/index.php");
 
 }
 function editar_producto(){
@@ -60,7 +60,7 @@ function editar_producto(){
     $consulta="UPDATE productos SET nombre = '$nombre', descripcion = '$descripcion', precio = '$precio', cantidad = '$cantidad', categorias = '$categorias', imagen = '$imagenFin' WHERE id = $id";
 
     mysqli_query($conexion, $consulta);
-    header("Location: ../views/usuarios/");
+    header("Location: ../Views/index.php");
 }
 function eliminar_producto(){
 
@@ -69,6 +69,6 @@ function eliminar_producto(){
     $id = $_POST['id'];
     $consulta = "DELETE FROM productos WHERE id = $id";
     mysqli_query($conexion, $consulta);
-    header("Location: ../views/usuarios/");
+    header("Location: ../Views/index.php");
 }
 ?>

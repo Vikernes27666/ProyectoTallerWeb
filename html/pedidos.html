@@ -43,7 +43,7 @@
 
 
 
-<!--Desarrollo modal pago  -->
+<!-- Desarrollo modal pago -->
 <div id="modal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -83,10 +83,6 @@
           <label for="address">Dirección de entrega:</label>
           <input type="text" id="address" name="address">
         </li>
-        <!-- <li id="homeAddress" style="display: none;">
-          <label for="homeAddress">Dirección de vivienda:</label>
-          <input type="text" id="homeAddress" name="homeAddress">
-        </li> -->
         <li id="restaurantLocation" style="display: none;">
           <label for="restaurantLocation">Buscar tu restaurante más cercano:</label>
           <button type="button" id="searchRestaurant">Buscar</button>
@@ -100,13 +96,17 @@
           <input type="text" id="lastName" name="lastName" required>
         </li>
         <li>
-          <label for="amount">Monto a Pagar "Precio en soles S/ ":</label>
+          <label for="email">Correo electrónico (Gmail):</label>
+          <input type="email" id="email" name="email" required>
+        </li>
+        <li>
+          <label for="phoneNumber">Número de teléfono:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </li>
+        <li>
+          <label for="amount">Monto a Pagar "Precio en soles S/":</label>
           <input type="text" id="amount" name="amount" readonly required>
         </li>
-        <!-- <li id="deliveryInfo" style="display: none;">
-          <label for="deliveryInstructions">Instrucciones de entrega:</label>
-          <textarea id="deliveryInstructions" name="deliveryInstructions"></textarea>
-        </li> -->
       </ul>
       <button type="submit" id="confirmPayment">Confirmar Pago</button>
     </form>
