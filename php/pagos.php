@@ -43,6 +43,11 @@ if ($conn->query($sql) !== TRUE) {
 // Crear una instancia de Dompdf
 $dompdf = new Dompdf();
 
+// Obtener la fecha y hora actual de Lima, Perú
+date_default_timezone_set('America/Lima');
+$currentDate = date("Y-m-d");
+$currentTime = date("H:i:s");
+
 // Crear el contenido del PDF con diseño
 $content = "<!DOCTYPE html>
 <html>
@@ -76,6 +81,8 @@ $content = "<!DOCTYPE html>
 <body>
 <div class='header'>
   <h1 style='font-size: 24px; font-weight: bold;'>Norkys</h1>
+  <div style='font-size: 12px;'>Fecha: $currentDate</div>
+  <div style='font-size: 12px;'>Hora: $currentTime</div>
 </div>
 <div class='details'>
   <div style='font-size: 18px; font-weight: bold; margin-bottom: 10px;'>Boleta de Compra</div>
@@ -128,11 +135,10 @@ exit();
 // Función para generar una firma aleatoria
 function generateRandomSignature() {
     $signatures = array(
-        "John Doe",
-        "Jane Smith",
-        "Robert Johnson",
-        "Mary Williams",
-        "Michael Brown"
+        "MIRANDA CAMPOS, Roberto Aroon",
+        "TEMBLADERA SALAZAR, Willam David",
+        "LOAYZA VILLALOBOS, Yahaira Aimet",
+        "CARLOS SEMPERTIGUE, Jeremy Sebastian",
     );
     $randomIndex = array_rand($signatures);
     return $signatures[$randomIndex];
